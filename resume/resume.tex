@@ -1,0 +1,222 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Dhanush P K} \\[2pt]
+    \small Kochi, India $|$ +91 9746530193 $|$
+    \href{mailto:dhanushpk50@gmail.com}{\underline{dhanushpk50@gmail.com}} \\[2pt]
+    \small
+    \href{https://dhanush788.github.io}{\underline{dhanush788.github.io}} $|$
+    \href{https://linkedin.com/in/dhanush-p-k}{\underline{linkedin.com/in/dhanush-p-k}} $|$
+    \href{https://github.com/dhanush788}{\underline{github.com/dhanush788}} $|$
+    \href{https://medium.com/@dhanushpk50}{\underline{medium.com/@dhanushpk50}}
+\end{center}
+
+%----------SUMMARY----------
+\section{Summary}
+\vspace{2pt}
+\small{Software engineer building financial infrastructure --- multi-tenant lending platforms, bank-to-bank payment orchestration, and the queueing and auditing that keep them correct under failure. Node.js, TypeScript and Go on the backend; React, Next.js and Swift when the problem reaches the user.}
+\vspace{-4pt}
+
+%-----------EXPERIENCE-----------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Nav Technologies}{May 2025 -- Present}
+      {Software Development Engineer}{Kochi, India}
+      \resumeItemListStart
+        \resumeItem{Led a team architecting \textbf{COLIGO 7.0} with multi-tenant architecture, transaction-safe processing and a caching layer, enabling onboarding of an NBFC client with \textbf{150+ branches}, \textbf{Rs.500+ Cr AUM} and \textbf{Rs.1+ Cr} in daily transaction value.}
+        \resumeItem{Built a \textbf{payment gateway} for a major financial organisation orchestrating transactions between multiple banks, on a queue-based asynchronous architecture using \textbf{Node.js, Kafka and PostgreSQL} with standard encryption, logging and authentication.}
+        \resumeItem{Delivered that gateway end to end --- REST APIs, webhook endpoints, the dashboard and payment-status checking --- and owned it through production rollout.}
+        \resumeItem{Architected a \textbf{Redis-backed queue and watchdog} that auto-detects and reruns failed or stalled jobs, replacing unreliable cron scheduling and eliminating silent failures for a major client.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Nav Technologies}{Jan 2025 -- Apr 2025}
+      {Software Development Intern}{Kochi, India}
+      \resumeItemListStart
+        \resumeItem{Integrated \textbf{KYC checks}, \textbf{eNACH} processing and other key workflows, automating major parts of the system.}
+        \resumeItem{Implemented a \textbf{TOTP-based authentication microservice} for secure sign-in, token issuance and authorisation across multiple platforms and services.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Lascade App Studio}{Aug 2024 -- Oct 2024}
+      {Software Developer Intern}{Kochi, India}
+      \resumeItemListStart
+        \resumeItem{Developed a SaaS iOS application using AR for measurement, handling end-to-end development including UI design and AR feature implementation, achieving over \textbf{10,000 downloads} with \textbf{90\% accuracy}.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+        {\textbf{\href{https://github.com/dhanush788/bastion-os}{Bastion-OS}} $|$ \emph{Go, PostgreSQL, Docker, OIDC}}{}
+        \resumeItemListStart
+          \resumeItem{Building a containerised bastion / jump-host platform that brokers secure, audited access to internal infrastructure, treating the bastion as a protocol-aware proxy rather than a shared SSH host.}
+          \resumeItem{Implemented an SSH proxy with session recording, OIDC device-flow authentication against Keycloak, and deny-by-default RBAC in PostgreSQL, so users never hold the target system's real credentials.}
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{\href{https://github.com/dhanush788/doctor-cli}{Medic}} $|$ \emph{Go, Docker, CLI}}{}
+        \resumeItemListStart
+          \resumeItem{Built a single-binary environment health diagnostic for on-call triage and CI preflight, sweeping host, Docker and dependency checks in one pass and exiting non-zero so it drops straight into pipelines.}
+          \resumeItem{Every failing check emits a remediation hint; user-defined checks are added in YAML without recompiling, and Docker Swarm checks activate automatically on manager nodes.}
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{\href{https://github.com/dhanush788/Mingliko}{JustDate}} $|$ \emph{Next.js, Turborepo, Supabase}}{}
+        \resumeItemListStart
+          \resumeItem{Developed a full-stack dating application using Next.js with Turborepo and Supabase, featuring real-time matching, messaging and end-to-end message encryption.}
+          \resumeItem{Deployed and scaled the platform across \textbf{3 university campuses}, supporting over \textbf{1000 active users} in real time.}
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{\href{https://www.npmjs.com/package/passkey_linker}{Passkey Linker}} $|$ \emph{JavaScript} $|$ \emph{Deprecated}}{}
+        \resumeItemListStart
+          \resumeItem{Built and published an NPM package for integrating passkey authentication into web apps, abstracting away FIDO2's setup complexity.}
+          \resumeItem{Implemented FIDO2-based challenge-response flow with RSA for encryption, handling registration and login end-to-end.}
+          \resumeItem{Published on npm with \textbf{50+ weekly downloads}.}
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{\href{https://github.com/dhanush788/chatwithdb}{ChatWithDB}} $|$ \emph{NestJS, Node.js}}{}
+        \resumeItemListStart
+          \resumeItem{Implemented Retrieval-Augmented Generation (RAG) architecture for querying NoSQL databases using natural language.}
+          \resumeItem{Optimized for low-latency responses, ensuring fast and efficient data retrieval and conversational performance.}
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{ARMeasure} $|$ \emph{Swift, ARKit}}{}
+        \resumeItemListStart
+          \resumeItem{Pioneered an iOS app with augmented reality features, enhancing precision through LiDAR integration.}
+          \resumeItem{Integrated SwiftData for efficient local data management and used shader techniques to optimize visualization and overall app performance.}
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{Kuku} $|$ \emph{HTML, JavaScript, MapLibre GL}}{}
+        \resumeItemListStart
+          \resumeItem{Engineered a 2D travel route animation app using MapLibre GL, implementing adaptive map themes based on time, weather and user preferences to enhance engagement.}
+          \resumeItem{Reduced application load by \textbf{75\%} and held an average \textbf{45 FPS}, using cubic Bezier easing for seamless transitions.}
+        \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Cochin University of Science and Technology}{Cochin, India}
+      {Bachelor of Technology in Computer Science}{Aug. 2021 -- Apr. 2025}
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: JavaScript, TypeScript, Go, Swift, Python, Java, Dart, SQL} \\
+     \textbf{Frameworks}{: Node.js, Nest.js, Express, React, Next.js, Angular, React Native, SwiftUI, Flutter, FastAPI} \\
+     \textbf{Data \& Messaging}{: PostgreSQL, MySQL, Oracle DB, MongoDB Atlas, Supabase, Firebase, Redis, Kafka} \\
+     \textbf{DevOps / Tools}{: AWS, GCP, Docker, CI/CD, Monitoring, Alerting, Backup, Linux} \\
+     \textbf{Security}{: OIDC, TOTP / 2FA, WebAuthn (FIDO2), JWT, RBAC, KYC \& eNACH integrations}
+    }}
+ \end{itemize}
+\vspace{-6pt}
+
+%-----------AWARDS AND ACCOMPLISHMENTS-----------
+\section{Volunteering and Accomplishments}
+  \begin{itemize}[leftmargin=0.15in]
+    \setlength\itemsep{-0.2em}
+    \item\small\textbf{Top 20 Finalist}, Nomura KakushIN 2024, Mumbai.
+    \item\small\textbf{Tech Lead}, TEDxCUSAT 2024.
+    \item\small\textbf{Web Developer}, Dhishna 2023.
+    \item\small\textbf{All India Rank 1}, \textit{Pondicherry Central University Entrance Exam 2021-22} (5-year Integrated M.Sc Mathematics).
+  \end{itemize}
+
+\end{document}
