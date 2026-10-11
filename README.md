@@ -1,6 +1,6 @@
 # dhanush788.github.io
 
-Personal portfolio — [dhanush788.github.io](https://dhanush788.github.io)
+Personal portfolio — [dhanush.lymsta.com](https://dhanush.lymsta.com)
 
 ## Layout
 
