@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dhanush P K</title>
-<meta name="description" content="Software engineer in Kochi, India. I build payment and lending infrastructure at Nav Technologies, and Go tooling on the side.">
+<meta name="description" content="Software engineer in Kochi, India. Backend systems for finance at Nav Technologies.">
 <meta name="author" content="Dhanush P K">
 <meta name="theme-color" content="#faf8f3">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Dhanush P K">
-<meta property="og:description" content="Software engineer in Kochi, India. Payment and lending infrastructure at Nav Technologies; Go tooling on the side.">
+<meta property="og:description" content="Software engineer in Kochi, India. Backend systems for finance at Nav Technologies.">
 <meta property="og:url" content="https://dhanush788.github.io/">
 <meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://dhanush788.github.io/">
@@ -123,10 +123,10 @@ document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();
 
 <section id="intro">
   <h2>A short introduction</h2>
-  <p>I build software that has to move money correctly. Most of my work is backend — payment orchestration, multi-tenant lending platforms, and the queueing and auditing that decide what happens when something fails at 2am.</p>
-  <p>I am currently a Software Development Engineer at Nav Technologies, where I led the architecture for COLIGO 7.0 and built a payment gateway that settles transactions across several banks. Before that I shipped an ARKit measurement app to 10,000 downloads and a real-time Next.js product used by a thousand students across three campuses.</p>
-  <p>Outside work I write Go tooling, mostly for problems I have hit myself: a bastion that proxies and records access instead of handing out keys, and a diagnostic that tells an on-call engineer what to fix rather than just that something is red.</p>
-  <p>If you want to talk about backend systems, payments, or Go, send a note to <a href="mailto:dhanushpk50@gmail.com">dhanushpk50@gmail.com</a>.</p>
+  <p>I build backend systems for finance. Payments, lending platforms, and the queues and audit trails they run on.</p>
+  <p>I am currently at Nav Technologies in Kochi. I work on COLIGO, a multi-tenant lending platform, and on a payment gateway that settles transactions between banks. Before that I built iOS and web products at Lascade App Studio and on my own.</p>
+  <p>I studied Computer Science at CUSAT. In my own time I write Go, mostly infrastructure tools for problems I ran into at work.</p>
+  <p>If you want to talk about backend systems, payments or Go, write to <a href="mailto:dhanushpk50@gmail.com">dhanushpk50@gmail.com</a>.</p>
 </section>
 
 <hr>
@@ -135,27 +135,20 @@ document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();
   <h2>Work</h2>
 
   <div class="e">
-    <p class="e-h"><b>Nav Technologies</b> <span class="dim">— Software Development Engineer (2025–present)</span></p>
-    <ul>
-      <li>Led a team architecting COLIGO 7.0 — multi-tenant architecture, transaction-safe processing and a caching layer. It onboarded an NBFC with 150+ branches, ₹500+ Cr AUM and ₹1+ Cr in daily transaction value.</li>
-      <li>Built a payment gateway that orchestrates transactions between multiple banks, on a queue-based asynchronous architecture in Node.js, Kafka and Postgres. I wrote the whole thing — REST APIs, webhook endpoints, the dashboard and payment-status checking.</li>
-      <li>Replaced unreliable cron scheduling with a Redis-backed queue and watchdog that detects and reruns failed or stalled jobs, ending silent failures for a major client.</li>
-    </ul>
+    <p class="e-h"><b>Nav Technologies</b> <span class="dim">- Software Development Engineer (2025-present)</span></p>
+    <p>Led the architecture for COLIGO 7.0: multi-tenant, transaction-safe processing, caching. It onboarded an NBFC with 150+ branches and ₹500+ Cr AUM.</p>
+    <p>Built a payment gateway on Node.js, Kafka and Postgres that orchestrates transactions across several banks, including the APIs, webhooks and dashboard.</p>
+    <p>Replaced cron scheduling with a Redis-backed queue and watchdog that reruns failed and stalled jobs.</p>
   </div>
 
   <div class="e">
-    <p class="e-h"><b>Nav Technologies</b> <span class="dim">— Software Development Intern (2025)</span></p>
-    <ul>
-      <li>Integrated KYC checks, eNACH processing and other workflows that had been manual.</li>
-      <li>Built a TOTP-based authentication microservice handling sign-in, token issuance and authorisation across several platforms and services.</li>
-    </ul>
+    <p class="e-h"><b>Nav Technologies</b> <span class="dim">- Software Development Intern (2025)</span></p>
+    <p>Integrated KYC and eNACH workflows. Built a TOTP authentication microservice used across several services.</p>
   </div>
 
   <div class="e">
-    <p class="e-h"><b>Lascade App Studio</b> <span class="dim">— Software Developer Intern (2024)</span></p>
-    <ul>
-      <li>Built a SaaS iOS measurement app with ARKit end to end, from UI design through the AR features. It reached 10,000+ downloads at 90% accuracy.</li>
-    </ul>
+    <p class="e-h"><b>Lascade App Studio</b> <span class="dim">- Software Developer Intern (2024)</span></p>
+    <p>Built a SaaS iOS measurement app with ARKit. 10,000+ downloads.</p>
   </div>
 </section>
 
@@ -165,26 +158,26 @@ document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();
   <h2>Selected projects</h2>
 
   <div class="e">
-    <p class="e-h"><b>JustDate</b> <span class="dim">— A dating app for university campuses. Next.js in a Turborepo monorepo with Supabase, real-time matching and end-to-end encrypted messages. Ran on three campuses with 1,000+ active users. (2025)</span></p>
+    <p class="e-h"><b>JustDate</b> <span class="dim">- A dating app for university campuses, on Next.js and Supabase with encrypted messages. Ran on three campuses with 1,000 users. (2025)</span></p>
     <p class="links"><a href="https://github.com/dhanush788/Mingliko">Code</a></p>
   </div>
 
   <div class="e">
-    <p class="e-h"><b>Passkey Linker</b> <span class="dim">— An npm package for adding passkey sign-in to a web app without learning the FIDO2 spec. Full challenge–response flow with RSA. Reached 50+ weekly downloads before I retired it. (2024)</span></p>
+    <p class="e-h"><b>Passkey Linker</b> <span class="dim">- An npm package for adding passkey sign-in to a web app, without the FIDO2 setup. Deprecated. (2024)</span></p>
     <p class="links"><a href="https://www.npmjs.com/package/passkey_linker">npm</a><a href="https://github.com/dhanush788/passkey-linker">Code</a></p>
   </div>
 
   <div class="e">
-    <p class="e-h"><b>ARMeasure</b> <span class="dim">— An iOS measurement app in Swift and ARKit, using LiDAR for precision, SwiftData for local storage and custom shaders to keep the render path fast. (2024)</span></p>
+    <p class="e-h"><b>ARMeasure</b> <span class="dim">- An iOS measurement app in Swift, using ARKit and LiDAR. (2024)</span></p>
   </div>
 
   <div class="e">
-    <p class="e-h"><b>ChatWithDB</b> <span class="dim">— Natural-language querying for NoSQL databases, built on a RAG architecture and tuned for low-latency responses. (2025)</span></p>
+    <p class="e-h"><b>ChatWithDB</b> <span class="dim">- Natural language queries over NoSQL databases, using RAG. (2025)</span></p>
     <p class="links"><a href="https://github.com/dhanush788/chatwithdb">Code</a></p>
   </div>
 
   <div class="e">
-    <p class="e-h"><b>Kuku</b> <span class="dim">— A 2D travel route animator on MapLibre GL, with map themes that adapt to time and weather. Cut load by 75% and held 45 FPS. (2024)</span></p>
+    <p class="e-h"><b>Kuku</b> <span class="dim">- A 2D travel route animator on MapLibre GL, with map themes that follow time and weather. (2024)</span></p>
   </div>
 </section>
 
@@ -194,14 +187,14 @@ document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();
   <h2>Building</h2>
 
   <div class="e">
-    <p class="e-h"><b>bastion-os</b> <span class="dim">— Go (2026)</span></p>
-    <p>A bastion that behaves like a protocol-aware proxy instead of an SSH box you log into. It authenticates you against an OIDC provider, authorises the specific target under deny-by-default RBAC, opens its own connection with a managed credential, and records the session — so nobody ends up holding the target's real secrets.</p>
+    <p class="e-h"><b>bastion-os</b> <span class="dim">- Building (2026)</span></p>
+    <p>A bastion built as a protocol-aware proxy rather than a shared SSH host. OIDC login, deny-by-default RBAC, managed credentials, recorded sessions.</p>
     <p class="links"><a href="https://github.com/dhanush788/bastion-os">Code</a></p>
   </div>
 
   <div class="e">
-    <p class="e-h"><b>medic</b> <span class="dim">— Go (2026)</span></p>
-    <p>A one-shot environment health check for on-call triage and CI preflight. It sweeps the host, Docker and your dependencies in a single pass, prints a pass/fail report where every failure carries the command that fixes it, and exits non-zero so it drops straight into a pipeline. One static binary; Swarm checks turn themselves on when the host is a manager.</p>
+    <p class="e-h"><b>medic</b> <span class="dim">- Building (2026)</span></p>
+    <p>A single-binary health check for hosts, Docker and app dependencies. Every failure prints the command that fixes it, and it exits non-zero for CI.</p>
     <p class="links"><a href="https://github.com/dhanush788/doctor-cli">Code</a></p>
   </div>
 </section>
@@ -210,7 +203,7 @@ document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();
 
 <section id="stack">
   <h2>Stack</h2>
-  <p>Node.js, TypeScript and Go on the backend, with Postgres, Redis and Kafka behind them. React, Next.js and React Native on the front, and Swift when the problem is an iPhone. I deploy on AWS and GCP with Docker and CI/CD, and I have spent enough time on OIDC, TOTP, WebAuthn and RBAC to have opinions about all four.</p>
+  <p>Node.js, TypeScript and Go on the backend, with Postgres, Redis and Kafka. React and Next.js on the web, Swift on iOS. AWS and GCP, Docker, CI/CD.</p>
 </section>
 
 <hr>
@@ -226,30 +219,8 @@ document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();
   </p>
 </section>
 
-<hr>
-
-<section id="other">
-  <h2>Other things</h2>
-  <p class="inline-list">
-    <a href="https://github.com/dhanush788/tedx2024">TEDxCUSAT 2024</a> /
-    <a href="https://github.com/dhanush788/CineMatch">CineMatch</a> /
-    <a href="https://github.com/dhanush788/Sponsor_app">Sponsir</a> /
-    <a href="https://github.com/dhanush788/api-nest">Medmate</a> /
-    <a href="https://github.com/dhanush788/TaxiTrack-Analytics">TaxiTrack</a> /
-    <a href="https://github.com/dhanush788/ARVision-Shape">ARVision-Shape</a> /
-    <a href="https://github.com/dhanush788?tab=repositories">the rest</a>
-  </p>
-</section>
-
-<hr>
-
-<section id="before">
-  <h2>Before this</h2>
-  <p>B.Tech in Computer Science from Cochin University of Science and Technology, 2021–2025. Top 20 finalist at Nomura KakushIN 2024 in Mumbai, tech lead for TEDxCUSAT 2024, and web developer for Dhishna 2023. All India Rank 1 in the Pondicherry Central University entrance exam for the integrated M.Sc in Mathematics, which is how I nearly became a mathematician instead.</p>
-</section>
-
 <footer>
-  <p>Kochi, India. Hand-written HTML, no framework, no tracking.</p>
+  <p>© 2026 Dhanush P K</p>
 </footer>
 
 </div>
