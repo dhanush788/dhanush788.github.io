@@ -22,7 +22,6 @@ jobs:
         with:
           root_file: resume.tex
           working_directory: resume
-          latexmk_use_pdflatex: true
 
       - name: Publish PDF to site root
         run: |
@@ -36,7 +35,13 @@ jobs:
           git add resume.pdf
           if git diff --staged --quiet; then
             echo "resume.pdf unchanged"
-          else
-            git commit -m "ci: rebuild resume.pdf"
-            git push
+            exit 0
           fi
+          git commit -m "ci: rebuild resume.pdf"
+          # main may have moved while we compiled — rebase and retry rather than fail
+          for i in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push && exit 0
+            echo "push attempt $i failed, retrying"
+            sleep 5
+          done
+          exit 1
