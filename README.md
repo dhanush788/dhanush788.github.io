@@ -14,11 +14,13 @@ CNAME                   custom domain
 
 ## Editing
 
-`index.html` is self-contained — markup, CSS tokens and a small script in one file.
-Change the content, commit to `main`, and GitHub Pages redeploys in ~60 seconds.
+`index.html` is self-contained — markup, CSS and a small theme script in one
+file, about 12 KB. Change the content, commit to `main`, and GitHub Pages
+redeploys in ~60 seconds.
 
-Colours live in the `:root` / `[data-theme="light"]` token blocks at the top of
-the `<style>` element. Change `--accent` in both to re-skin the site.
+Colours live in the `:root` and `html[data-theme="dark"]` blocks at the top of
+the `<style>` element. The theme control cycles System → Light → Dark and
+remembers the choice in `localStorage`.
 
 ## Résumé
 
