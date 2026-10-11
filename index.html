@@ -16,6 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <style>
 /* ── tokens ───────────────────────────────────────────── */
 :root{
@@ -138,7 +139,7 @@ h1 .sub{display:block;color:var(--muted);font-weight:500}
 .stat .k{font-family:var(--fm);font-size:12px;color:var(--faint);line-height:1.45}
 
 /* ── section furniture ────────────────────────────────── */
-section{padding:84px 0}
+section{padding:84px 0;scroll-margin-top:72px}
 .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:40px}
 .sec-num{font-family:var(--fm);font-size:12.5px;color:var(--accent);letter-spacing:.06em;flex:none}
 h2{font-size:clamp(1.5rem,3vw,1.95rem);font-weight:600;letter-spacing:-.025em;margin:0}
@@ -402,7 +403,7 @@ footer{border-top:1px solid var(--border);padding:34px 0;margin-top:24px}
         <div class="tags"><span class="tag">NestJS</span><span class="tag">Node.js</span><span class="tag">RAG</span><span class="tag">LLM</span><span class="tag">NoSQL</span></div>
       </article>
 
-      <article class="card reveal">
+      <article class="card feature reveal">
         <div class="card-top"><span class="idx">006</span><span class="lang">Go</span><span class="card-year">2026</span></div>
         <h3><a href="https://github.com/dhanush788/doctor-cli" target="_blank" rel="noopener">medic</a>
           <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg></h3>
@@ -479,12 +480,12 @@ footer{border-top:1px solid var(--border);padding:34px 0;margin-top:24px}
         <p>I graduated in <strong>Computer Science from CUSAT</strong> in 2025 and have been pushing code to GitHub since 2019. If you are building something that has to be both secure and actually shippable, I would like to hear about it.</p>
       </div>
       <aside class="panel">
-        <h4>Recognition</h4>
+        <h4>Education &amp; recognition</h4>
+        <div class="row"><span class="yr">2025</span><span class="t"><b>B.Tech Computer Science</b>, Cochin University of Science and Technology</span></div>
         <div class="row"><span class="yr">2024</span><span class="t"><b>Top 20 Finalist</b>, Nomura KakushIN 2024, Mumbai</span></div>
         <div class="row"><span class="yr">2024</span><span class="t"><b>Tech Lead</b>, TEDxCUSAT</span></div>
         <div class="row"><span class="yr">2023</span><span class="t"><b>Web Developer</b>, Dhishna 2023</span></div>
         <div class="row"><span class="yr">2021</span><span class="t"><b>All India Rank 1</b> — Pondicherry Central University entrance, 5-year Integrated M.Sc Mathematics</span></div>
-        <div class="row"><span class="yr">2025</span><span class="t"><b>B.Tech Computer Science</b>, Cochin University of Science and Technology</span></div>
       </aside>
     </div>
   </div>
@@ -544,12 +545,16 @@ footer{border-top:1px solid var(--border);padding:34px 0;margin-top:24px}
   var onScroll=function(){ nav.classList.toggle('scrolled', window.scrollY>8) };
   onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
 
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target) } });
-  },{threshold:.06,rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.reveal').forEach(function(el,i){
-    el.style.transitionDelay=(Math.min(i,6)*45)+'ms'; io.observe(el);
-  });
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  var showAll=function(){ els.forEach(function(e){ e.classList.add('in') }) };
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target) } });
+    },{threshold:.06,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el,i){ el.style.transitionDelay=(Math.min(i,6)*45)+'ms'; io.observe(el) });
+    // failsafe: nothing stays invisible, whatever the browser does
+    setTimeout(showAll,2500);
+  } else { showAll() }
 
   document.querySelectorAll('.card').forEach(function(c){
     c.addEventListener('pointermove',function(e){
